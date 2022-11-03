@@ -94,7 +94,7 @@ conn = ldap_connection()
 conn.search(LDAP_BASE_DN, LDAP_OBJECT_FILTER, attributes=user_attr_list)
 
 # output to json file
-json_file_path = '/tmp/ldap-searchlight/data/ldap-users.json'
+json_file_path = '/tmp/ldap-searchlight/data/ldap_users.json'
 data = json.loads(conn.response_to_json())
 with open(json_file_path, 'w') as jsonfile:
     json.dump(data, jsonfile)
